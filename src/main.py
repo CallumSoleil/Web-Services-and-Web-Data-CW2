@@ -9,9 +9,13 @@ from search import print_word, find_terms
 START_URL = "https://quotes.toscrape.com/"
 INDEX_FILE = "data/index.json"
 
+
 def cmd_build(args: List[str]) -> None:
     if len(args) != 1:
-        print("Usage: build <max_pages>")
+        print(
+            "[ERROR] Invalid command usage.\n"
+            "  Usage: build <max_pages>"
+        )
         return
 
     max_pages = int(args[0])
@@ -20,9 +24,11 @@ def cmd_build(args: List[str]) -> None:
     pages = crawl(START_URL, max_pages)
 
     if not pages:
-        print("[ERROR] No pages were crawled.")
-        print("The website may be offline, unreachable, or invalid.")
-        print("Index was NOT created.")
+        print(
+            "[ERROR] No pages were crawled.\n"
+            "  - The website may be offline or unreachable.\n"
+            "  - Index was NOT created."
+        )
         return
 
     print(f"Indexed {len(pages)} pages. Building index...")
@@ -38,45 +44,67 @@ def cmd_load() -> Optional[Dict[str, Dict[str, dict]]]:
         print(f"Loading index from {INDEX_FILE}...")
         return load_index(INDEX_FILE)
     except FileNotFoundError:
-        print(f"Error: {INDEX_FILE} not found. Run 'build <max_pages>' first.")
+        print(
+            "[ERROR] Index file not found.\n"
+            f"  - Path: {INDEX_FILE}\n"
+            "  - Run 'build <max_pages>' before loading the index."
+        )
         return None
 
 
 def cmd_print(index: Optional[Dict[str, Dict[str, dict]]], args: List[str]) -> None:
     if index is None:
-        print("No index loaded. Use 'load' first.")
+        print(
+            "[ERROR] No index loaded.\n"
+            "  Use 'load' before running this command."
+        )
         return
 
     if len(args) != 1:
-        print("Usage: print <word>")
+        print(
+            "[ERROR] Invalid command usage.\n"
+            "  Usage: print <word>"
+        )
         return
 
     word = args[0]
     entry = print_word(index, word)
 
     if entry is None:
-        print(f"'{word}' not found in index")
+        print(
+            "[ERROR] Word not found in index.\n"
+            f"  - Word: {word}"
+        )
     else:
         print(json.dumps(entry, indent=2))
 
 
 def cmd_find(index: Optional[Dict[str, Dict[str, dict]]], args: List[str]) -> None:
     if index is None:
-        print("No index loaded. Use 'load' first.")
+        print(
+            "[ERROR] No index loaded.\n"
+            "  Use 'load' before running this command."
+        )
         return
 
     if len(args) == 0:
-        print("Usage: find <term1> <term2> ...")
+        print(
+            "[ERROR] Invalid command usage.\n"
+            "  Usage: find <term1> <term2> ..."
+        )
         return
 
     results = find_terms(index, args)
 
     if not results:
-        print("No documents contain all terms")
+        print(
+            "[ERROR] No documents contain all terms.\n"
+            f"  - Terms: {', '.join(args)}"
+        )
     else:
         print("Documents containing all terms:")
         for url in results:
-            print(" -", url)
+            print(f"  - {url}")
 
 
 def main() -> None:
@@ -124,7 +152,11 @@ def main() -> None:
             cmd_find(index, args)
 
         else:
-            print(f"Unknown command: {command}")
+            print(
+                "[ERROR] Unknown command.\n"
+                f"  - Received: {command}\n"
+                "  - Type 'help' for a list of commands."
+            )
 
 
 if __name__ == "__main__":

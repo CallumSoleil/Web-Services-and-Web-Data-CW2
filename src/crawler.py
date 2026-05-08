@@ -23,26 +23,44 @@ def fetch_page(url: str) -> str | None:
         return response.text
 
     except requests.exceptions.Timeout:
-        print(f"[ERROR] Timeout while trying to reach {url}")
+        print(
+            "[ERROR] Timeout while fetching page.\n"
+            f"  - URL: {url}\n"
+            "  - Reason: Request timed out."
+        )
         return None
 
     except requests.exceptions.ConnectionError:
-        print(f"[ERROR] Could not connect to {url}")
+        print(
+            "[ERROR] Connection error while fetching page.\n"
+            f"  - URL: {url}\n"
+            "  - Reason: Unable to establish a connection."
+        )
         return None
 
     except requests.exceptions.HTTPError as e:
-        print(f"[ERROR] HTTP error for {url}: {e}")
+        print(
+            "[ERROR] HTTP error while fetching page.\n"
+            f"  - URL: {url}\n"
+            f"  - Reason: {e}"
+        )
         return None
 
     except requests.exceptions.RequestException as e:
-        print(f"[ERROR] Failed to fetch {url}: {e}")
+        print(
+            "[ERROR] Request failed while fetching page.\n"
+            f"  - URL: {url}\n"
+            f"  - Reason: {e}"
+        )
         return None
 
     except Exception as e:
-        print(f"[ERROR] Unexpected error fetching {url}: {e}")
+        print(
+            "[ERROR] Unexpected error while fetching page.\n"
+            f"  - URL: {url}\n"
+            f"  - Reason: {e}"
+        )
         return None
-
-
 
 
 def extract_links(html: str, base_url: str) -> set[str]:
@@ -87,12 +105,19 @@ def crawl(start_url: str, max_pages: int = 20) -> dict[str, str]:
         html = fetch_page(url)
         if html is None:
             if url == start_url and not visited:
-                print("[FATAL] Could not fetch the start URL.")
-                print("The website may be down or unreachable.")
+                print(
+                    "[ERROR] Failed to fetch the starting URL.\n"
+                    f"  - URL: {start_url}\n"
+                    "  - The website may be offline or unreachable.\n"
+                    "  - Crawling aborted."
+                )
                 return {}
-            print(f"[WARN] Skipping unreachable page: {url}")
-            continue
 
+            print(
+                "[ERROR] Skipping unreachable page.\n"
+                f"  - URL: {url}"
+            )
+            continue
 
         visited.add(url)
         pages[url] = extract_text(html)
