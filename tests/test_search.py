@@ -15,9 +15,11 @@ def test_print_word_found():
     }
 
     result = print_word(index, "hello")
+
     assert result is not None
     assert "url1" in result
     assert result["url1"]["freq"] == 2
+    assert result["url1"]["positions"] == [0, 3]
 
 
 def test_print_word_not_found():
@@ -35,7 +37,9 @@ def test_find_terms_single_word():
     }
 
     result = find_terms(index, ["good"])
-    assert result == {"url1", "url2"}
+
+    # Order is not guaranteed, so compare as sets
+    assert set(result) == {"url1", "url2"}
 
 
 def test_find_terms_multi_word_and():
@@ -45,7 +49,9 @@ def test_find_terms_multi_word_and():
     }
 
     result = find_terms(index, ["good", "friends"])
-    assert result == {"url1"}
+
+    # Only url1 contains both
+    assert result == ["url1"]
 
 
 def test_find_terms_missing_word():
@@ -54,4 +60,5 @@ def test_find_terms_missing_word():
     }
 
     result = find_terms(index, ["good", "nonexistent"])
-    assert result == set()
+
+    assert result == []
