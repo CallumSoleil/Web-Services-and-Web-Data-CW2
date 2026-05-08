@@ -115,7 +115,7 @@ def main() -> None:
 
     while True:
         try:
-            line = input("search> ").strip()
+            line = input("\nsearch> ").strip()
         except EOFError:
             break
 
