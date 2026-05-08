@@ -1,4 +1,5 @@
 import json
+import os
 import re
 from typing import Dict, List
 
@@ -50,7 +51,11 @@ def save_index(index: dict, path: str) -> None:
     """
     Save the inverted index to a JSON file.
     """
-    with open(path, "w", encoding="utf-8") as f:
+    directory = os.path.dirname(path)
+    if directory == "":
+        path = os.path.join("data", path)
+
+    with open(path, "w") as f:
         json.dump(index, f, indent=2)
 
 
