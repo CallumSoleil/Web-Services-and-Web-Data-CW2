@@ -88,16 +88,17 @@ def extract_text(html: str) -> str:
     return soup.get_text(separator=" ", strip=True)
 
 
-def crawl(start_url: str, max_pages: int = 20) -> dict[str, str]:
+def crawl(start_url: str) -> dict[str, str]:
     """
     Crawl pages starting from start_url.
     Returns a mapping: url -> extracted text.
+    Crawls the entire site (no page limit).
     """
     to_visit: list[str] = [start_url]
     visited: set[str] = set()
     pages: dict[str, str] = {}
 
-    while to_visit and len(visited) < max_pages:
+    while to_visit:
         url = to_visit.pop(0)
         if url in visited:
             continue

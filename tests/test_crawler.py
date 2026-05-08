@@ -82,7 +82,7 @@ def test_extract_text():
 def test_crawl_unreachable_start_url(mock_fetch):
     mock_fetch.return_value = None
 
-    pages = crawl("http://bad-url.com", max_pages=1)
+    pages = crawl("http://bad-url.com")
 
     assert pages == {}  # Should stop immediately
 
@@ -91,7 +91,7 @@ def test_crawl_unreachable_start_url(mock_fetch):
 def test_crawl_collects_pages(mock_fetch):
     mock_fetch.return_value = "<html><body>Hello</body></html>"
 
-    pages = crawl("http://example.com", max_pages=1)
+    pages = crawl("http://example.com")
 
     assert "http://example.com" in pages
     assert isinstance(pages["http://example.com"], str)

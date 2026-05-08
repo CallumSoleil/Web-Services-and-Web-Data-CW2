@@ -11,17 +11,15 @@ INDEX_FILE = "data/index.json"
 
 
 def cmd_build(args: List[str]) -> None:
-    if len(args) != 1:
+    if len(args) != 0:
         print(
             "[ERROR] Invalid command usage.\n"
-            "  Usage: build <max_pages>"
+            "  Usage: build"
         )
         return
 
-    max_pages = int(args[0])
-
-    print(f"Crawling from fixed URL: {START_URL} (max {max_pages} pages)")
-    pages = crawl(START_URL, max_pages)
+    print(f"Crawling from fixed URL: {START_URL}")
+    pages = crawl(START_URL)   # <-- no max_pages
 
     if not pages:
         print(
@@ -47,7 +45,7 @@ def cmd_load() -> Optional[Dict[str, Dict[str, dict]]]:
         print(
             "[ERROR] Index file not found.\n"
             f"  - Path: {INDEX_FILE}\n"
-            "  - Run 'build <max_pages>' before loading the index."
+            "  - Run 'build' before loading the index."
         )
         return None
 
@@ -132,7 +130,7 @@ def main() -> None:
 
         elif command == "help":
             print("Commands:")
-            print("  build <max_pages>")
+            print("  build")
             print("  load")
             print("  print <word>")
             print("  find <term1> <term2> ...")
