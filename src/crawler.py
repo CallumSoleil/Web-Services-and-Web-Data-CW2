@@ -21,8 +21,28 @@ def fetch_page(url: str) -> str | None:
         time.sleep(POLITENESS_SECONDS)
 
         return response.text
-    except Exception:
+
+    except requests.exceptions.Timeout:
+        print(f"[ERROR] Timeout while trying to reach {url}")
         return None
+
+    except requests.exceptions.ConnectionError:
+        print(f"[ERROR] Could not connect to {url}")
+        return None
+
+    except requests.exceptions.HTTPError as e:
+        print(f"[ERROR] HTTP error for {url}: {e}")
+        return None
+
+    except requests.exceptions.RequestException as e:
+        print(f"[ERROR] Failed to fetch {url}: {e}")
+        return None
+
+    except Exception as e:
+        print(f"[ERROR] Unexpected error fetching {url}: {e}")
+        return None
+
+
 
 
 def extract_links(html: str, base_url: str) -> set[str]:
@@ -66,7 +86,13 @@ def crawl(start_url: str, max_pages: int = 20) -> dict[str, str]:
 
         html = fetch_page(url)
         if html is None:
+            if url == start_url and not visited:
+                print("[FATAL] Could not fetch the start URL.")
+                print("The website may be down or unreachable.")
+                return {}
+            print(f"[WARN] Skipping unreachable page: {url}")
             continue
+
 
         visited.add(url)
         pages[url] = extract_text(html)

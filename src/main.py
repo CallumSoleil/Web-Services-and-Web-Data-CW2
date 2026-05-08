@@ -20,6 +20,13 @@ def cmd_build(args):
     print(f"Crawling from fixed URL: {START_URL} (max {max_pages} pages)")
     pages = crawl(START_URL, max_pages)
 
+    if not pages:
+        print("[ERROR] No pages were crawled.")
+        print("The website may be offline, unreachable, or invalid.")
+        print("Index was NOT created.")
+        return
+
+
     print(f"Indexed {len(pages)} pages. Building index...")
     index = build_index(pages)
 
