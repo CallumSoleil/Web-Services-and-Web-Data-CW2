@@ -51,25 +51,36 @@ def test_build_index_structure():
     assert "friends" in index
     assert "enemies" in index
 
-    # URL entries should exist
-    assert "url1" in index["good"]
-    assert "url2" in index["good"]
+    # Posting lists should be lists
+    assert isinstance(index["good"], list)
+
+    # Extract URLs from posting list
+    urls = [p["url"] for p in index["good"]]
+    assert "url1" in urls
+    assert "url2" in urls
 
     # Frequency should be correct
-    assert index["good"]["url1"]["freq"] == 2
-    assert index["good"]["url2"]["freq"] == 1
+    p_url1 = next(p for p in index["good"] if p["url"] == "url1")
+    p_url2 = next(p for p in index["good"] if p["url"] == "url2")
+
+    assert p_url1["freq"] == 2
+    assert p_url2["freq"] == 1
 
     # Positions should be lists
-    assert isinstance(index["good"]["url1"]["positions"], list)
+    assert isinstance(p_url1["positions"], list)
 
 
 def test_build_index_positions():
     pages = {"url": "a b a c a"}
     index = build_index(pages)
 
-    assert index["a"]["url"]["positions"] == [0, 2, 4]
-    assert index["b"]["url"]["positions"] == [1]
-    assert index["c"]["url"]["positions"] == [3]
+    postings_a = index["a"][0]
+    postings_b = index["b"][0]
+    postings_c = index["c"][0]
+
+    assert postings_a["positions"] == [0, 2, 4]
+    assert postings_b["positions"] == [1]
+    assert postings_c["positions"] == [3]
 
 
 def test_build_index_case_insensitive():
@@ -77,7 +88,8 @@ def test_build_index_case_insensitive():
     index = build_index(pages)
 
     assert "hello" in index
-    assert index["hello"]["url"]["freq"] == 3
+    postings = index["hello"][0]
+    assert postings["freq"] == 3
 
 
 def test_build_index_empty_pages():
@@ -91,8 +103,10 @@ def test_build_index_single_word():
     index = build_index(pages)
 
     assert "test" in index
-    assert index["test"]["url"]["freq"] == 1
-    assert index["test"]["url"]["positions"] == [0]
+    postings = index["test"][0]
+    assert postings["url"] == "url"
+    assert postings["freq"] == 1
+    assert postings["positions"] == [0]
 
 
 # -----------------------------
@@ -119,7 +133,11 @@ def test_save_index_creates_directory(tmp_path):
     nested_dir = tmp_path / "nested" / "deep"
     path = nested_dir / "index.json"
 
-    index = {"hello": {"url": {"freq": 1, "positions": [0]}}}
+    index = {
+        "hello": [
+            {"url": "url", "freq": 1, "positions": [0]}
+        ]
+    }
 
     save_index(index, str(path))
 
