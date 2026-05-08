@@ -7,7 +7,7 @@ from search import print_word, find_terms
 
 
 START_URL = "https://quotes.toscrape.com/"
-INDEX_FILE = "index.json"
+INDEX_FILE = "data/index.json"
 
 
 def cmd_build(args):
@@ -26,7 +26,6 @@ def cmd_build(args):
         print("Index was NOT created.")
         return
 
-
     print(f"Indexed {len(pages)} pages. Building index...")
     index = build_index(pages)
 
@@ -40,7 +39,7 @@ def cmd_load():
         print(f"Loading index from {INDEX_FILE}...")
         return load_index(INDEX_FILE)
     except FileNotFoundError:
-        print("Error: index.json not found. Run 'build <max_pages>' first.")
+        print(f"Error: {INDEX_FILE} not found. Run 'build <max_pages>' first.")
         return None
 
 
