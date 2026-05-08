@@ -1,40 +1,56 @@
-from typing import Dict, List, Set
+from typing import Dict, List, Optional, Set
 
 
-def print_word(index: Dict[str, dict], word: str) -> Dict[str, dict] | None:
+def print_word(index: Dict[str, List[dict]], word: str) -> Optional[List[dict]]:
     """
-    Return the index entry for a single word (case-insensitive).
-    If the word does not exist, return None.
+    Return the posting list for a word (case-insensitive).
     """
     word = word.lower()
     return index.get(word)
 
 
-def find_terms(index: Dict[str, dict], terms: List[str]) -> Set[str]:
-    """
-    Perform an AND search across multiple terms.
-    Returns a set of URLs that contain *all* the given terms.
-    """
-    if not terms:
-        return set()
 
-    # Normalize terms
+def find_terms(index: Dict[str, List[dict]], terms: List[str]) -> List[str]:
+    """
+    Return a sorted list of URLs that contain ALL of the given terms.
+    Works with posting-list index structure:
+        index[word] = [
+            {"url": str, "freq": int, "positions": [...]},
+            ...
+        ]
+    """
+    # Normalise terms
     terms = [t.lower() for t in terms]
 
-    # If any term is missing, no results
+    # If any term missing, no results
     for term in terms:
         if term not in index:
-            return set()
+            return []
 
-    # Start with URLs for the first term
-    result_urls = set(index[terms[0]].keys())
+    # Convert first term's postings into a list of URLs
+    result_urls = [p["url"] for p in index[terms[0]]]
 
-    # Intersect with URLs for the remaining terms
+    # Intersect with remaining posting lists
     for term in terms[1:]:
-        result_urls &= set(index[term].keys())
+        term_urls = [p["url"] for p in index[term]]
 
-        # Early exit if empty
+        # Both lists are sorted → linear-time intersection
+        i = j = 0
+        intersection = []
+
+        while i < len(result_urls) and j < len(term_urls):
+            if result_urls[i] == term_urls[j]:
+                intersection.append(result_urls[i])
+                i += 1
+                j += 1
+            elif result_urls[i] < term_urls[j]:
+                i += 1
+            else:
+                j += 1
+
+        result_urls = intersection
+
         if not result_urls:
-            return set()
+            return []
 
     return result_urls
