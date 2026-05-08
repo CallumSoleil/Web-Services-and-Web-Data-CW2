@@ -13,7 +13,7 @@ INDEX_FILE = "index.json"
 def cmd_build(args):
     if len(args) != 1:
         print("Usage: build <max_pages>")
-        return
+        return None
 
     max_pages = int(args[0])
 
@@ -26,8 +26,23 @@ def cmd_build(args):
     save_index(index, INDEX_FILE)
     print(f"Index saved to {INDEX_FILE}")
 
+    return index
+
+
+def cmd_load():
+    try:
+        print(f"Loading index from {INDEX_FILE}...")
+        return load_index(INDEX_FILE)
+    except FileNotFoundError:
+        print("Error: index.json not found. Run 'build <max_pages>' first.")
+        return None
+
 
 def cmd_print(index, args):
+    if index is None:
+        print("No index loaded. Use 'load' or 'build' first.")
+        return
+
     if len(args) != 1:
         print("Usage: print <word>")
         return
@@ -42,6 +57,10 @@ def cmd_print(index, args):
 
 
 def cmd_find(index, args):
+    if index is None:
+        print("No index loaded. Use 'load' or 'build' first.")
+        return
+
     if len(args) == 0:
         print("Usage: find <term1> <term2> ...")
         return
@@ -57,31 +76,51 @@ def cmd_find(index, args):
 
 
 def main():
-    if len(sys.argv) < 2:
-        print("Commands: build, print, find")
-        return
+    print("Simple Search Engine Shell")
+    print("Type 'help' for commands. Type 'exit' to quit.\n")
 
-    command = sys.argv[1]
-    args = sys.argv[2:]
+    index = None
 
-    # BUILD
-    if command == "build":
-        cmd_build(args)
-        return
+    while True:
+        try:
+            line = input("shell> ").strip()
+        except EOFError:
+            break
 
+        if not line:
+            continue
 
-    try:
-        index = load_index(INDEX_FILE)
-    except FileNotFoundError:
-        print("Error: index.json not found. Run 'build <max_pages>' first.")
-        return
+        parts = line.split()
+        command = parts[0]
+        args = parts[1:]
 
-    if command == "print":
-        cmd_print(index, args)
-    elif command == "find":
-        cmd_find(index, args)
-    else:
-        print("Unknown command:", command)
+        if command == "exit":
+            print("Goodbye.")
+            break
+
+        elif command == "help":
+            print("Commands:")
+            print("  build <max_pages>")
+            print("  load")
+            print("  print <word>")
+            print("  find <term1> <term2> ...")
+            print("  exit")
+            continue
+
+        elif command == "build":
+            index = cmd_build(args)
+
+        elif command == "load":
+            index = cmd_load()
+
+        elif command == "print":
+            cmd_print(index, args)
+
+        elif command == "find":
+            cmd_find(index, args)
+
+        else:
+            print(f"Unknown command: {command}")
 
 
 if __name__ == "__main__":
