@@ -13,21 +13,24 @@ def tokenize(text: str) -> List[str]:
     return TOKEN_PATTERN.findall(text.lower())
 
 
-def build_index(pages: Dict[str, str]) -> Dict[str, Dict[str, dict]]:
+def build_index(pages: Dict[str, str]) -> Dict[str, List[dict]]:
     """
-    Build an inverted index with frequency and positional statistics.
+    Build an inverted index using sorted posting lists.
 
-    Structure:
+    New structure:
     {
-        "word": {
-            "url1": {"freq": int, "positions": [int, ...]},
-            "url2": {"freq": int, "positions": [int, ...]}
-        },
+        "word": [
+            {"url": str, "freq": int, "positions": [int, ...]},
+            ...
+        ],
         ...
     }
+
+    Posting lists are sorted by URL to support efficient intersection.
     """
     index: Dict[str, Dict[str, dict]] = {}
 
+    # First pass: build temporary dict-of-dicts (easy for counting)
     for url, text in pages.items():
         words = tokenize(text)
 
@@ -41,7 +44,21 @@ def build_index(pages: Dict[str, str]) -> Dict[str, Dict[str, dict]]:
             index[word][url]["freq"] += 1
             index[word][url]["positions"].append(pos)
 
-    return index
+    # Second pass: convert each word's postings into a sorted list
+    final_index: Dict[str, List[dict]] = {}
+
+    for word, posting_dict in index.items():
+        postings_list = [
+            {"url": url, "freq": data["freq"], "positions": data["positions"]}
+            for url, data in posting_dict.items()
+        ]
+
+        # Sort postings by URL for deterministic ordering + efficient intersection
+        postings_list.sort(key=lambda p: p["url"])
+
+        final_index[word] = postings_list
+
+    return final_index
 
 
 def save_index(index: Dict[str, Any], path: str) -> None:
