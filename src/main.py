@@ -13,7 +13,7 @@ INDEX_FILE = "index.json"
 def cmd_build(args):
     if len(args) != 1:
         print("Usage: build <max_pages>")
-        return None
+        return
 
     max_pages = int(args[0])
 
@@ -25,8 +25,7 @@ def cmd_build(args):
 
     save_index(index, INDEX_FILE)
     print(f"Index saved to {INDEX_FILE}")
-
-    return index
+    print("Run 'load' to load the index into memory.")
 
 
 def cmd_load():
@@ -40,7 +39,7 @@ def cmd_load():
 
 def cmd_print(index, args):
     if index is None:
-        print("No index loaded. Use 'load' or 'build' first.")
+        print("No index loaded. Use 'load' first.")
         return
 
     if len(args) != 1:
@@ -58,7 +57,7 @@ def cmd_print(index, args):
 
 def cmd_find(index, args):
     if index is None:
-        print("No index loaded. Use 'load' or 'build' first.")
+        print("No index loaded. Use 'load' first.")
         return
 
     if len(args) == 0:
@@ -83,7 +82,7 @@ def main():
 
     while True:
         try:
-            line = input("shell> ").strip()
+            line = input("search> ").strip()
         except EOFError:
             break
 
@@ -108,7 +107,7 @@ def main():
             continue
 
         elif command == "build":
-            index = cmd_build(args)
+            cmd_build(args)
 
         elif command == "load":
             index = cmd_load()
