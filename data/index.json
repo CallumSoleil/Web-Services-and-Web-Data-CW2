@@ -1,0 +1,1517 @@
+{
+  "quotes": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 3,
+      "positions": [
+        0,
+        3,
+        283
+      ]
+    }
+  ],
+  "to": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 7,
+      "positions": [
+        1,
+        4,
+        67,
+        136,
+        153,
+        176,
+        184
+      ]
+    }
+  ],
+  "scrape": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 2,
+      "positions": [
+        2,
+        5
+      ]
+    }
+  ],
+  "login": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        6
+      ]
+    }
+  ],
+  "the": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 3,
+      "positions": [
+        7,
+        79,
+        98
+      ]
+    }
+  ],
+  "world": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 2,
+      "positions": [
+        8,
+        37
+      ]
+    }
+  ],
+  "as": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 3,
+      "positions": [
+        9,
+        73,
+        82
+      ]
+    }
+  ],
+  "we": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 2,
+      "positions": [
+        10,
+        46
+      ]
+    }
+  ],
+  "have": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 2,
+      "positions": [
+        11,
+        200
+      ]
+    }
+  ],
+  "created": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        12
+      ]
+    }
+  ],
+  "it": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 8,
+      "positions": [
+        13,
+        20,
+        38,
+        101,
+        133,
+        173,
+        236,
+        239
+      ]
+    }
+  ],
+  "is": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 12,
+      "positions": [
+        14,
+        39,
+        72,
+        76,
+        81,
+        85,
+        127,
+        130,
+        174,
+        226,
+        237,
+        256
+      ]
+    }
+  ],
+  "a": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 10,
+      "positions": [
+        15,
+        77,
+        86,
+        110,
+        155,
+        161,
+        216,
+        224,
+        228,
+        252
+      ]
+    }
+  ],
+  "process": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        16
+      ]
+    }
+  ],
+  "of": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 3,
+      "positions": [
+        17,
+        157,
+        163
+      ]
+    }
+  ],
+  "our": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 4,
+      "positions": [
+        18,
+        26,
+        40,
+        52
+      ]
+    }
+  ],
+  "thinking": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 3,
+      "positions": [
+        19,
+        27,
+        36
+      ]
+    }
+  ],
+  "cannot": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        21
+      ]
+    }
+  ],
+  "be": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 7,
+      "positions": [
+        22,
+        100,
+        114,
+        137,
+        148,
+        177,
+        185
+      ]
+    }
+  ],
+  "changed": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        23
+      ]
+    }
+  ],
+  "without": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 2,
+      "positions": [
+        24,
+        254
+      ]
+    }
+  ],
+  "changing": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        25
+      ]
+    }
+  ],
+  "by": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 12,
+      "positions": [
+        28,
+        54,
+        88,
+        117,
+        143,
+        165,
+        192,
+        214,
+        244,
+        261,
+        284,
+        289
+      ]
+    }
+  ],
+  "albert": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 3,
+      "positions": [
+        29,
+        89,
+        166
+      ]
+    }
+  ],
+  "einstein": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 3,
+      "positions": [
+        30,
+        90,
+        167
+      ]
+    }
+  ],
+  "about": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 10,
+      "positions": [
+        31,
+        58,
+        91,
+        120,
+        146,
+        168,
+        195,
+        218,
+        247,
+        264
+      ]
+    }
+  ],
+  "tags": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 11,
+      "positions": [
+        32,
+        59,
+        92,
+        121,
+        147,
+        169,
+        196,
+        219,
+        248,
+        265,
+        272
+      ]
+    }
+  ],
+  "change": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        33
+      ]
+    }
+  ],
+  "deep": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        34
+      ]
+    }
+  ],
+  "thoughts": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        35
+      ]
+    }
+  ],
+  "choices": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 2,
+      "positions": [
+        41,
+        61
+      ]
+    }
+  ],
+  "harry": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        42
+      ]
+    }
+  ],
+  "that": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 2,
+      "positions": [
+        43,
+        210
+      ]
+    }
+  ],
+  "show": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        44
+      ]
+    }
+  ],
+  "what": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 3,
+      "positions": [
+        45,
+        180,
+        188
+      ]
+    }
+  ],
+  "truly": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        47
+      ]
+    }
+  ],
+  "are": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 4,
+      "positions": [
+        48,
+        63,
+        182,
+        190
+      ]
+    }
+  ],
+  "far": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        49
+      ]
+    }
+  ],
+  "more": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        50
+      ]
+    }
+  ],
+  "than": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 3,
+      "positions": [
+        51,
+        140,
+        183
+      ]
+    }
+  ],
+  "abilities": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 2,
+      "positions": [
+        53,
+        60
+      ]
+    }
+  ],
+  "j": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        55
+      ]
+    }
+  ],
+  "k": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        56
+      ]
+    }
+  ],
+  "rowling": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        57
+      ]
+    }
+  ],
+  "there": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        62
+      ]
+    }
+  ],
+  "only": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        64
+      ]
+    }
+  ],
+  "two": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        65
+      ]
+    }
+  ],
+  "ways": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 2,
+      "positions": [
+        66,
+        209
+      ]
+    }
+  ],
+  "live": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 2,
+      "positions": [
+        68,
+        95
+      ]
+    }
+  ],
+  "your": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        69
+      ]
+    }
+  ],
+  "life": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 4,
+      "positions": [
+        70,
+        94,
+        197,
+        275
+      ]
+    }
+  ],
+  "one": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        71
+      ]
+    }
+  ],
+  "though": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 2,
+      "positions": [
+        74,
+        83
+      ]
+    }
+  ],
+  "nothing": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        75
+      ]
+    }
+  ],
+  "miracle": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 3,
+      "positions": [
+        78,
+        87,
+        96
+      ]
+    }
+  ],
+  "other": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        80
+      ]
+    }
+  ],
+  "everything": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        84
+      ]
+    }
+  ],
+  "inspirational": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 4,
+      "positions": [
+        93,
+        150,
+        222,
+        274
+      ]
+    }
+  ],
+  "miracles": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        97
+      ]
+    }
+  ],
+  "person": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        99
+      ]
+    }
+  ],
+  "gentleman": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        102
+      ]
+    }
+  ],
+  "or": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        103
+      ]
+    }
+  ],
+  "lady": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        104
+      ]
+    }
+  ],
+  "who": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        105
+      ]
+    }
+  ],
+  "has": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        106
+      ]
+    }
+  ],
+  "not": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 4,
+      "positions": [
+        107,
+        152,
+        191,
+        201
+      ]
+    }
+  ],
+  "pleasure": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        108
+      ]
+    }
+  ],
+  "in": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 2,
+      "positions": [
+        109,
+        241
+      ]
+    }
+  ],
+  "good": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        111
+      ]
+    }
+  ],
+  "novel": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        112
+      ]
+    }
+  ],
+  "must": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        113
+      ]
+    }
+  ],
+  "intolerably": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        115
+      ]
+    }
+  ],
+  "stupid": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        116
+      ]
+    }
+  ],
+  "jane": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        118
+      ]
+    }
+  ],
+  "austen": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        119
+      ]
+    }
+  ],
+  "aliteracy": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        122
+      ]
+    }
+  ],
+  "books": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 2,
+      "positions": [
+        123,
+        277
+      ]
+    }
+  ],
+  "classic": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        124
+      ]
+    }
+  ],
+  "humor": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 3,
+      "positions": [
+        125,
+        266,
+        276
+      ]
+    }
+  ],
+  "imperfection": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        126
+      ]
+    }
+  ],
+  "beauty": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        128
+      ]
+    }
+  ],
+  "madness": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        129
+      ]
+    }
+  ],
+  "genius": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        131
+      ]
+    }
+  ],
+  "and": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        132
+      ]
+    }
+  ],
+  "s": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 2,
+      "positions": [
+        134,
+        240
+      ]
+    }
+  ],
+  "better": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 2,
+      "positions": [
+        135,
+        175
+      ]
+    }
+  ],
+  "absolutely": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 2,
+      "positions": [
+        138,
+        141
+      ]
+    }
+  ],
+  "ridiculous": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        139
+      ]
+    }
+  ],
+  "boring": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        142
+      ]
+    }
+  ],
+  "marilyn": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        144
+      ]
+    }
+  ],
+  "monroe": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        145
+      ]
+    }
+  ],
+  "yourself": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        149
+      ]
+    }
+  ],
+  "try": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        151
+      ]
+    }
+  ],
+  "become": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 2,
+      "positions": [
+        154,
+        160
+      ]
+    }
+  ],
+  "man": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 2,
+      "positions": [
+        156,
+        162
+      ]
+    }
+  ],
+  "success": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 2,
+      "positions": [
+        158,
+        171
+      ]
+    }
+  ],
+  "rather": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        159
+      ]
+    }
+  ],
+  "value": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 2,
+      "positions": [
+        164,
+        172
+      ]
+    }
+  ],
+  "adulthood": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        170
+      ]
+    }
+  ],
+  "hated": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        178
+      ]
+    }
+  ],
+  "for": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 2,
+      "positions": [
+        179,
+        187
+      ]
+    }
+  ],
+  "you": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 4,
+      "positions": [
+        181,
+        189,
+        231,
+        258
+      ]
+    }
+  ],
+  "loved": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        186
+      ]
+    }
+  ],
+  "andr": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        193
+      ]
+    }
+  ],
+  "gide": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        194
+      ]
+    }
+  ],
+  "love": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 2,
+      "positions": [
+        198,
+        273
+      ]
+    }
+  ],
+  "i": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 2,
+      "positions": [
+        199,
+        203
+      ]
+    }
+  ],
+  "failed": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        202
+      ]
+    }
+  ],
+  "ve": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        204
+      ]
+    }
+  ],
+  "just": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        205
+      ]
+    }
+  ],
+  "found": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        206
+      ]
+    }
+  ],
+  "10": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        207
+      ]
+    }
+  ],
+  "000": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        208
+      ]
+    }
+  ],
+  "won": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        211
+      ]
+    }
+  ],
+  "t": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        212
+      ]
+    }
+  ],
+  "work": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        213
+      ]
+    }
+  ],
+  "thomas": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        215
+      ]
+    }
+  ],
+  "edison": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 2,
+      "positions": [
+        217,
+        220
+      ]
+    }
+  ],
+  "failure": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        221
+      ]
+    }
+  ],
+  "paraphrased": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        223
+      ]
+    }
+  ],
+  "woman": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        225
+      ]
+    }
+  ],
+  "like": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 2,
+      "positions": [
+        227,
+        257
+      ]
+    }
+  ],
+  "tea": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        229
+      ]
+    }
+  ],
+  "bag": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        230
+      ]
+    }
+  ],
+  "never": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        232
+      ]
+    }
+  ],
+  "know": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 2,
+      "positions": [
+        233,
+        259
+      ]
+    }
+  ],
+  "how": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        234
+      ]
+    }
+  ],
+  "strong": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        235
+      ]
+    }
+  ],
+  "until": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        238
+      ]
+    }
+  ],
+  "hot": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        242
+      ]
+    }
+  ],
+  "water": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        243
+      ]
+    }
+  ],
+  "eleanor": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 2,
+      "positions": [
+        245,
+        250
+      ]
+    }
+  ],
+  "roosevelt": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 2,
+      "positions": [
+        246,
+        251
+      ]
+    }
+  ],
+  "misattributed": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        249
+      ]
+    }
+  ],
+  "day": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        253
+      ]
+    }
+  ],
+  "sunshine": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        255
+      ]
+    }
+  ],
+  "night": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        260
+      ]
+    }
+  ],
+  "steve": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        262
+      ]
+    }
+  ],
+  "martin": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        263
+      ]
+    }
+  ],
+  "obvious": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        267
+      ]
+    }
+  ],
+  "simile": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 2,
+      "positions": [
+        268,
+        282
+      ]
+    }
+  ],
+  "next": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        269
+      ]
+    }
+  ],
+  "top": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        270
+      ]
+    }
+  ],
+  "ten": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        271
+      ]
+    }
+  ],
+  "reading": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        278
+      ]
+    }
+  ],
+  "friendship": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        279
+      ]
+    }
+  ],
+  "friends": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        280
+      ]
+    }
+  ],
+  "truth": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        281
+      ]
+    }
+  ],
+  "goodreads": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        285
+      ]
+    }
+  ],
+  "com": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        286
+      ]
+    }
+  ],
+  "made": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        287
+      ]
+    }
+  ],
+  "with": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        288
+      ]
+    }
+  ],
+  "zyte": [
+    {
+      "url": "https://quotes.toscrape.com/",
+      "freq": 1,
+      "positions": [
+        290
+      ]
+    }
+  ]
+}
