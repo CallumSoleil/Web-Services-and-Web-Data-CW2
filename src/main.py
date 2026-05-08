@@ -1,5 +1,5 @@
-import sys
 import json
+from typing import Dict, List, Optional
 
 from crawler import crawl
 from indexer import build_index, save_index, load_index
@@ -9,8 +9,7 @@ from search import print_word, find_terms
 START_URL = "https://quotes.toscrape.com/"
 INDEX_FILE = "data/index.json"
 
-
-def cmd_build(args):
+def cmd_build(args: List[str]) -> None:
     if len(args) != 1:
         print("Usage: build <max_pages>")
         return
@@ -34,7 +33,7 @@ def cmd_build(args):
     print("Run 'load' to load the index into memory.")
 
 
-def cmd_load():
+def cmd_load() -> Optional[Dict[str, Dict[str, dict]]]:
     try:
         print(f"Loading index from {INDEX_FILE}...")
         return load_index(INDEX_FILE)
@@ -43,7 +42,7 @@ def cmd_load():
         return None
 
 
-def cmd_print(index, args):
+def cmd_print(index: Optional[Dict[str, Dict[str, dict]]], args: List[str]) -> None:
     if index is None:
         print("No index loaded. Use 'load' first.")
         return
@@ -61,7 +60,7 @@ def cmd_print(index, args):
         print(json.dumps(entry, indent=2))
 
 
-def cmd_find(index, args):
+def cmd_find(index: Optional[Dict[str, Dict[str, dict]]], args: List[str]) -> None:
     if index is None:
         print("No index loaded. Use 'load' first.")
         return
@@ -80,11 +79,11 @@ def cmd_find(index, args):
             print(" -", url)
 
 
-def main():
+def main() -> None:
     print("Simple Search Engine Shell")
     print("Type 'help' for commands. Type 'exit' to quit.\n")
 
-    index = None
+    index: Optional[Dict[str, Dict[str, dict]]] = None
 
     while True:
         try:
