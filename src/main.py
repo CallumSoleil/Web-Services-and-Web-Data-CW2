@@ -7,15 +7,15 @@ from search import print_word, find_terms
 
 
 START_URL = "https://quotes.toscrape.com/"
+INDEX_FILE = "index.json"
 
 
 def cmd_build(args):
-    if len(args) != 2:
-        print("Usage: build <max_pages> <index_file>")
+    if len(args) != 1:
+        print("Usage: build <max_pages>")
         return
 
     max_pages = int(args[0])
-    index_file = args[1]
 
     print(f"Crawling from fixed URL: {START_URL} (max {max_pages} pages)")
     pages = crawl(START_URL, max_pages)
@@ -23,8 +23,8 @@ def cmd_build(args):
     print(f"Indexed {len(pages)} pages. Building index...")
     index = build_index(pages)
 
-    save_index(index, index_file)
-    print(f"Index saved to {index_file}")
+    save_index(index, INDEX_FILE)
+    print(f"Index saved to {INDEX_FILE}")
 
 
 def cmd_print(index, args):
@@ -64,24 +64,22 @@ def main():
     command = sys.argv[1]
     args = sys.argv[2:]
 
-    # BUILD does not require loading an index
+    # BUILD
     if command == "build":
         cmd_build(args)
         return
 
-    # PRINT and FIND require an index file
-    if len(args) == 0:
-        print("You must specify an index file first.")
-        print("Usage: main.py <command> <index_file> ...")
+
+    try:
+        index = load_index(INDEX_FILE)
+    except FileNotFoundError:
+        print("Error: index.json not found. Run 'build <max_pages>' first.")
         return
 
-    index_file = args[0]
-    index = load_index(index_file)
-
     if command == "print":
-        cmd_print(index, args[1:])
+        cmd_print(index, args)
     elif command == "find":
-        cmd_find(index, args[1:])
+        cmd_find(index, args)
     else:
         print("Unknown command:", command)
 
